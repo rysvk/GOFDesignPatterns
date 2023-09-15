@@ -14,7 +14,7 @@ public class DatabaseManager {
     private DatabaseManager() {
     }
 
-    public static synchronized DatabaseManager getInstance() {
+    public static DatabaseManager getInstance() {
         if (instance == null) {
             // Outer null check can allow 2 threads. Once instance is created this prevents access to synchronized block.
             synchronized (DatabaseManager.class) {
